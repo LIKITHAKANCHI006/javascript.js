@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicConnect - Online Complaint Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏙️ CivicConnect</h1>
+        <p>Public Issue & Complaint Management Portal</p>
+
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#register">Register Complaint</a> |
+            <a href="#track">Track Complaint</a> |
+            <a href="#admin">Admin Dashboard</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <section id="home">
+        <h2>Your Neighbourhood. Our Shared Responsibility.</h2>
+        <p>
+            Report civic issues such as damaged roads, street light failures,
+            water pipe leakage and blocked rainwater drains.
+            Submit a complaint and follow its progress in one place.
+        </p>
+
+        <h3>Community Overview</h3>
+        <ul>
+            <li>Total Complaints</li>
+            <li>Pending Complaints</li>
+            <li>In Progress</li>
+            <li>Resolved Complaints</li>
+        </ul>
+
+        <h3>Issues You Can Report</h3>
+        <ul>
+            <li>💡 Street Light Problem</li>
+            <li>💧 Water Pipe Leakage</li>
+            <li>🌧️ Rainwater Drainage</li>
+            <li>🛣️ Road Damage / Pothole</li>
+            <li>🗑️ Garbage / Sanitation</li>
+            <li>📋 Other Civic Issues</li>
+        </ul>
+
+        <h3>How It Works</h3>
+        <ol>
+            <li>Fill in the complaint form.</li>
+            <li>Receive a unique complaint ID.</li>
+            <li>Use the ID to track progress.</li>
+            <li>Staff can update the complaint status.</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section id="register">
+        <h2>Register a Complaint</h2>
+        <p>Provide accurate details so the responsible team can locate the issue.</p>
+
+        <form>
+            <label for="citizen">Your Name:</label><br>
+            <input type="text" id="citizen" name="citizen" required><br><br>
+
+            <label for="phone">Mobile Number:</label><br>
+            <input type="tel" id="phone" name="phone" maxlength="10" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="category">Complaint Category:</label><br>
+            <select id="category" name="category" required>
+                <option value="">Select an Issue</option>
+                <option>Street Light Problem</option>
+                <option>Water Pipe Leakage</option>
+                <option>Rainwater Drainage</option>
+                <option>Road Problem / Pothole</option>
+                <option>Garbage / Sanitation</option>
+                <option>Other Civic Issue</option>
+            </select><br><br>
+
+            <label for="location">Issue Location / Address:</label><br>
+            <input type="text" id="location" name="location" required><br><br>
+
+            <label for="description">Describe the Problem:</label><br>
+            <textarea id="description" name="description" rows="5" cols="40" required></textarea><br><br>
+
+            <label for="photo">Photo Evidence:</label><br>
+            <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+
+            <button type="submit">Submit Complaint</button>
+            <button type="reset">Clear Form</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="track">
+        <h2>Track Your Complaint</h2>
+        <p>Enter the complaint reference number received after submission.</p>
+
+        <form>
+            <label for="trackId">Complaint Reference ID:</label><br>
+            <input type="text" id="trackId" name="trackId" placeholder="CC-20261105-1234"><br><br>
+
+            <button type="submit">Find Complaint</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="admin">
+        <h2>Admin Dashboard</h2>
+        <p>Review and manage submitted complaints.</p>
+
+        <label for="search">Search Complaint:</label><br>
+        <input type="search" id="search" placeholder="Search ID, name or location"><br><br>
+
+        <label for="status">Filter by Status:</label><br>
+        <select id="status">
+            <option>All Statuses</option>
+            <option>Pending</option>
+            <option>Processing</option>
+            <option>Resolved</option>
+            <option>Rejected</option>
+        </select><br><br>
+
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Reference ID</th>
+                    <th>Citizen Name</th>
+                    <th>Category</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>CC-001</td>
+                    <td>Sample Citizen</td>
+                    <td>Road Problem</td>
+                    <td>Chennai</td>
+                    <td>11-11-2026</td>
+                    <td>Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <footer>
+        <h3>CivicConnect</h3>
+        <p>Online Complaint Registration & Management System</p>
+        <p>Making our neighbourhood a better place.</p>
+        <p>For emergencies, contact the appropriate local authority directly.</p>
+    </footer>
+
+</body>
+</html>
